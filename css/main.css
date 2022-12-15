@@ -1,220 +1,136 @@
-@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
-
-body {
-    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-    overflow-x: hidden;
-}
-
-.Wrap {
-    min-width: 1200px;
-}
-
-/* 상위메뉴설정 */
-
-#header {
-    position: fixed;
+#header img {
     top: 0;
-    left: 0;
-    z-index: 999;
-    display: flex;
-    padding: 0 50px;
-    justify-content: space-between;
-    line-height: 80px;
-    background: transparent;
+    width: 300px;
 }
 
-#header:hover {
-    background: transparent;
-
-}
 
 #header h1 {
-    flex: 1;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 999;
+}
+
+
+#header nav {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+#header nav>ul {
+    width: 50px;
+}
+
+#header nav>ul>li>a {
+    position: relative;
+    display: block;
+    height: 20px;
     font-size: 0;
-}
-
-
-
-#header .link {
-    flex: 1;
-    text-align: center;
-    margin: 50px 0;
 
 }
 
-#header .gnb>ul {
-    display: flex;
-    justify-content: center;
-    width: 1200px;
-
-}
-
-
-
-#header .gnb>ul>li>a {
-    padding: 40px 40px;
-
-    font-size: 18px;
-}
-
-#header .gnb>ul>li a {
-    display: block;
-    text-align: center;
-
-}
-
-
-
-
-
-#header .gnb>ul>li:hover .menu_wrap {
-    display: block;
-    background: transparent;
-    position: absolute;
-    top: 100px;
-    left: 20%;
-    line-height: 30px;
-    width: 100px;
-    transform: translate(-50%, 0);
-    margin: 30px 0;
-    height: 0;
-
-    transition: 0.5s;
-
-}
-
-
-#header .gnb>ul>li .menu_wrap {
-    position: absolute;
-    top: 100px;
-    left: 0px;
-    right: 0;
-    line-height: 25px;
-    display: none;
-    background: transparent;
-
-}
-
-
-
-#header .mega {
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 30px 100px;
-    gap: 50px;
-
-}
-
-#header .mega img {
-    width: 300px;
-    height: 150px;
-}
-
-
-
-
-#header .mega .right_menu {
-    display: flex;
-    gap: 30px;
-
-}
-
-
-
-
-
-#header .gnb:hover>ul>li .right_menu {
-
-    height: 500px;
-    margin: 20px 0;
-}
-
-#header .gnb::before {
+#header nav>ul>li>a::after {
     content: "";
     position: absolute;
-    top: 120px;
-    left: 0;
+    top: 50%;
     right: 0;
-    height: 0;
-    background: rgba(0, 0, 0, 0.3);
+    width: 15px;
+    height: 2px;
+    background: #ddd;
 
+}
+
+#header nav>ul>li.on>a::after {
+    width: 40px;
     transition: 0.5s;
 }
 
-#header:hover .gnb::before {
-    height: 200px;
-    margin: 20px 0;
-}
-
-
-
-/* 메인페이지 설정 */
-
-.mainVisual {
-    position: relative;
-
-}
-
-.mainVisual .mainSlide figure {
-    position: relative;
-    height: 1000px;
-    top: 0;
-    margin: 0 auto;
-}
-
-
-.mainVisual .mainSlide .itm01 {
-    background: url(../img/main01.jpg)no-repeat center center/cover;
-}
-
-.mainVisual .mainSlide .itm02 {
-    background: url(../img/main02.jpg)no-repeat center center/cover;
-}
-
-.mainVisual .mainSlide .itm03 {
-    background: url(../img/photo01.jpg)no-repeat center center/cover;
-}
-
-.mainVisual .mainSlide .itm04 {
-    background: url(../img/main06.jpg)no-repeat center center/cover;
-}
-
-.mainVisual .mainSlide .itm05 {
-    background: url(../img/main05.jpg)no-repeat center center/cover;
-}
-
-.mainVisual .mainSlide h2 {
+.main .inner {
+    position: absolute;
     font-size: 30px;
     font-weight: 700;
-    padding: 350px 0 0 150px;
-    text-shadow: 0 0 3px #000;
-    color: #fff;
+    top: 500px;
+    left: 0;
+    padding: 0 0 0 150px;
 
+    color: #fff;
 }
 
-.mainVisual .mainSlide p {
-    font-size: 15px;
+.main .inner h2 {
+    font-size: 30px;
     font-weight: 700;
-    padding: 50px 0 0 150px;
+    padding: 20px 0;
+    text-shadow: 0 0 2px #000;
+    color: #fff;
+
+}
+
+.main .inner p {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 50px 0 0 20px;
+    word-break: keep-all;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.main .inner a {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 60px 0 0 20px;
     text-shadow: 0 0 3px #000;
     color: #fff;
 }
 
-.mainVisual .mainSlide a {
-    font-size: 15px;
-    font-weight: 700;
-    padding: 80px 0 0 150px;
-    text-shadow: 0 0 3px #000;
-    color: #fff;
+
+
+.section h2 {
+    opacity: 0;
+    transform: translate(0, 100px);
 }
+
+.section.on h2 {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.3s 0.3s;
+}
+
+.section p {
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.section.on p {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.5s 0.5s;
+}
+
+.section a {
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.section.on a {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 0.6s 0.6s;
+}
+
+
+
+
 
 .mainContent {
-    padding: 100px 0;
+    padding: 20px 20px;
     background: rgba(0, 0, 0, 0.95);
-    height: 1300px;
+    height: 1000px;
+
 }
 
 .mainContent h2 {
@@ -228,15 +144,19 @@ body {
 .mainContent p {
     font-size: 15px;
     text-align: center;
-    margin: 0 0 130px 0;
+    margin: 0 0 10px 0;
     color: #fff;
 }
 
 .mainContent .inner {
     display: flex;
     gap: 30px;
-    width: 1500px;
+    width: 1300px;
+    height: 600px;
     margin: 0 auto;
+    top: 250px;
+    left: 230px;
+
 }
 
 .mainContent .inner figure {
@@ -244,19 +164,19 @@ body {
 }
 
 .mainContent .inner figure h3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 30px 0;
+    margin: 20px 0;
     text-align: center;
     color: #333;
 }
 
 .mainContent .inner figure p {
-    font-size: 15px;
-    margin: 30px 0;
+    font-size: 14px;
+    margin: 10px 0;
     text-align: center;
     color: #333;
-    line-height: 30px;
+    line-height: 20px;
 }
 
 .mainContent .inner>div {
@@ -264,22 +184,20 @@ body {
     flex: 1;
     border: 1px solid #f7f7f7;
     padding: 10px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+
     border-radius: 5px;
     background: #ddd;
 }
 
-.mainContent .inner>div:hover {
-    box-shadow: none;
-}
+
 
 .mainContent .inner>div::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    border-top: 3px solid #333;
-    border-left: 3px solid #333;
+    border-top: 2px solid #333;
+    border-left: 2px solid #333;
     width: 0;
     height: 0;
     visibility: hidden;
@@ -299,8 +217,8 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    border-bottom: 3px solid #333;
-    border-right: 3px solid #333;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
     width: 0;
     height: 0;
     visibility: hidden;
@@ -314,33 +232,34 @@ body {
 
 }
 
+
 .mainCustomer {
-    padding: 100px 0;
+    display: block;
     background: #fff;
-    height: 1600px;
+
 }
 
 .video iframe {
-    position: relative;
     height: 800px;
     width: 1500px;
     display: flex;
     background: center;
-    margin: 200px 0 0 200px;
+
 }
 
 .mainCustomer .inner h3 {
     font-size: 80px;
     font-weight: bold;
-    margin: 50px 200px;
+    top: 0;
+    margin: 0 auto;
     text-align: left;
     color: #333;
 }
 
 .mainCustomer .inner p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 10px 200px;
+
     text-align: left;
     color: #333;
     line-height: 40px;
@@ -348,9 +267,34 @@ body {
 
 
 
-#footer {
-    background: #333;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer .totop {
+    position: fixed;
+    bottom: 80px;
+    right: 50px;
+    z-index: 999;
     color: #fff;
-    text-align: center;
-    padding: 30px 0 60px 0;
+    height: 30px;
+    width: 30px;
+
+}
+
+#footer .totop p {
+    padding: 20px 0;
+
 }
