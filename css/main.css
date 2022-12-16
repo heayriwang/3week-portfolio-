@@ -1,5 +1,9 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 
+
+
+
+/* 사이드바 */
 #header img {
     top: 0;
     width: 300px;
@@ -111,18 +115,142 @@
     transition: 0.5s 0.5s;
 }
 
-.section a {
-    opacity: 0;
-    transform: translate(0, 100px);
+
+
+
+
+
+
+
+/* 상위메뉴 */
+.header_top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+    line-height: 80px;
+    background: transparent;
 }
 
-.section.on a {
-    opacity: 1;
-    transform: translate(0, 0);
-    transition: 0.6s 0.6s;
+.header_top:hover {
+    background: transparent;
+
+}
+
+.header_top h1 {
+    flex: 1;
+    font-size: 0;
 }
 
 
+
+.header_top .link {
+    flex: 1;
+    text-align: center;
+    margin: 50px 0;
+
+}
+
+.header_top .gnb>ul {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+
+}
+
+
+
+.header_top .gnb>ul>li>a {
+    padding: 40px 40px;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+.header_top .submenu a {
+    color: #fff;
+}
+
+
+
+.header_top .gnb>ul>li:hover .menu_wrap {
+    display: block;
+    background: transparent rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    line-height: 30px;
+    width: 100px;
+    transform: translate(-50%, 0);
+    margin: 30px 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+
+}
+
+.header_top .gnb>ul>li .menu_wrap {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    right: 0;
+    line-height: 25px;
+    display: none;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.header_top .mega {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 30px 100px;
+    gap: 50px;
+
+}
+
+.header_top .mega img {
+    width: 300px;
+    height: 150px;
+}
+
+
+
+
+.header_top .mega .right_menu {
+    display: flex;
+    gap: 30px;
+
+}
+
+
+
+
+
+.header_top .gnb:hover>ul>li .right_menu {
+
+    height: 500px;
+    margin: 20px 0;
+}
+
+.header_top .gnb::before {
+    content: "";
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: 0.5s;
+}
 
 
 
@@ -171,12 +299,13 @@
     color: #333;
 }
 
-.mainContent .inner figure p {
+.mainContent .inner figure pp {
     font-size: 14px;
     margin: 10px 0;
     text-align: center;
     color: #333;
     line-height: 20px;
+    word-break: keep-all;
 }
 
 .mainContent .inner>div {
@@ -233,38 +362,50 @@
 }
 
 
-.mainCustomer {
-    display: block;
+.section_vd .mainCustomer {
+    position: relative;
+    padding: 10px 0;
+    height: 1000px;
     background: #fff;
-
+    top: 0;
 }
 
+
+
 .video iframe {
+    position: relative;
     height: 800px;
     width: 1500px;
     display: flex;
-    background: center;
 
+
+}
+
+.mainCustomer {
+    display: block;
+}
+
+.mainCustomer .inner {
+    margin: 1000px 0;
 }
 
 .mainCustomer .inner h3 {
     font-size: 80px;
     font-weight: bold;
     top: 0;
-    margin: 0 auto;
+    padding: 10px 0;
     text-align: left;
     color: #333;
 }
 
 .mainCustomer .inner p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 
     text-align: left;
     color: #333;
     line-height: 40px;
 }
-
 
 
 
@@ -297,4 +438,70 @@
 #footer .totop p {
     padding: 20px 0;
 
+}
+
+#footer {
+    background: #343a40;
+    color: #f8f9fa;
+    padding: 0 0 50px 0;
+}
+
+
+#footer .top02 {
+    line-height: 80px;
+    border-bottom: 1px solid #555;
+}
+
+#footer .top02 .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#footer .top02 .left {
+    font-size: 0;
+}
+
+#footer .top02 .left li {
+    display: inline-block;
+    font-size: 15px;
+
+}
+
+#footer .top02 .left li~li::before {
+    content: "";
+    margin: 0 20px;
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #ddd;
+}
+
+#footer .top02 .right {
+    display: flex;
+    gap: 2px;
+}
+
+#footer .top02 .right i {
+    font-size: 20px;
+    padding: 10px;
+    background: #333;
+    border-radius: 50%;
+}
+
+#footer .bottom {
+    line-height: 80px;
+}
+
+#f_link {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    background: #343a40;
+    border: 1px solid #555;
+}
+
+#f_link option {
+    padding: 5px 20px;
 }
